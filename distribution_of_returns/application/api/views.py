@@ -22,6 +22,7 @@ class GetDataView(APIView):
 
 
         def data_retrieval(stock_ticker=stock_ticker, time_horizon="10y", time_frame="1d"):
+        # def data_retrieval(stock_ticker=stock_ticker, time_horizon="30d", time_frame="1d"):
             data = yf.Ticker(f"{stock_ticker}").history(period=time_horizon, interval=time_frame)
             return data
         
@@ -33,7 +34,7 @@ class GetDataView(APIView):
         data["Returns 1D"] = data['Close'].pct_change(periods=1) * 100
         data["Returns 1W"] = data['Close'].pct_change(periods=5) * 100
         data["Returns 1M"] = data['Close'].pct_change(periods=20) * 100
-        data = data[["ticker", "Returns 1D", "Returns 1W", "Returns 1M"]]
+        data = data[["ticker", "Returns 1D", "Returns 1W", "Returns 1M"]].dropna()
 
 
         data = data.to_json(orient='index', date_format='iso')
