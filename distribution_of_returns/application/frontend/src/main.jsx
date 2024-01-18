@@ -14,7 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <Provider store={store}>
       <div 
         data-theme={mainConstants.meta.theme} 
-        className='container flex items-center mx-auto px-2 my-8 prose lg:prose-xl'
+        className='container flex justify-center max-w-full mx-auto px-2 my-8 prose lg:prose-xl'
       >
         <div>
           <App />

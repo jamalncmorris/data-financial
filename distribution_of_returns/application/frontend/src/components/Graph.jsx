@@ -39,6 +39,7 @@ function Graph() {
   return (
     <div>
       <Plot
+        className='w-full'
         data={[
           {
             x: returns,
@@ -48,7 +49,7 @@ function Graph() {
             // marker: {color: 'red'},
           },
         ]}
-        layout={{width: '100px', height: '300px', title: `${lastTicker} Returns ${timeFrame} Histogram`}}
+        layout={{title: `${lastTicker} Returns ${timeFrame} Histogram`}}
         config={{ 
           displayModeBar: false,
         }}
