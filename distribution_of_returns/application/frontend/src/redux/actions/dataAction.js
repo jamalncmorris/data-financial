@@ -1,14 +1,14 @@
 import axios from 'axios';
 
 // Action to fetch data from the API
-export const fetchData = () => {
+export const fetchData = (stockTicker = '', timeFrame = '1D') => {
     return dispatch => {
-        axios.get('http://localhost:8000/api/get')
+        axios.get(`http://localhost:8000/api/get?ticker=${stockTicker}&time_frame=${timeFrame}`)
             .then(response => {
-                dispatch(setData(response.data));
+                dispatch(setData({ data: response.data, timeFrame: timeFrame }));
             })
             .catch(error => {
-                console.error('Error loading data:', error);
+                console.error('Error:', error);
             });
     };
 };
@@ -26,7 +26,8 @@ export const submitFormData = (stockTicker, timeFrame) => {
     return dispatch => {
         axios.get(`http://localhost:8000/api/get?ticker=${stockTicker}&time_frame=${timeFrame}`)
             .then(response => {
-                dispatch(setData(response.data));
+                // Include timeFrame in the payload
+                dispatch(setData({ data: response.data, timeFrame: timeFrame }));
             })
             .catch(error => {
                 console.error('Error:', error);

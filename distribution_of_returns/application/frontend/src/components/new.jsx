@@ -3,13 +3,10 @@ import { useSelector } from 'react-redux';
 import Plot from 'react-plotly.js';
 
 function Graph() {
-
-  const timeFrame = useSelector(state => state.data.timeFrame);
-
   const data = useSelector(state => state.data);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [returns, setReturns] = useState([]);
+  const [returns1D, setReturns1D] = useState([]);
   const [lastTicker, setLastTicker] = useState('');
 
   useEffect(() => {
@@ -23,9 +20,9 @@ function Graph() {
       const lastTickerValue = tickers[tickers.length - 1];
       setLastTicker(lastTickerValue);
 
-      const transformedReturns = Object.values(data.data).map(item => item[`Returns ${timeFrame}`]).filter(value => value != null);
-      console.log("Transformed Returns:", transformedReturns);
-      setReturns(transformedReturns);
+      const transformedReturns1D = Object.values(data.data).map(item => item['Returns 1D']).filter(value => value != null);
+      console.log("Transformed Returns 1D:", transformedReturns1D);
+      setReturns1D(transformedReturns1D);
       setLoading(false);
     } else {
       setLoading(true);
@@ -35,20 +32,20 @@ function Graph() {
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
-  https://finance.yahoo.com/screener/unsaved/481313f0-3ce3-4f35-9758-2ba65a06b9eb
+
   return (
     <div>
       <Plot
         data={[
           {
-            x: returns,
+            x: returns1D,
             type: 'histogram',
             histnorm: 'probability', // 'count' or 'probability'
             autobinx: true,
             // marker: {color: 'red'},
           },
         ]}
-        layout={{width: '100px', height: '300px', title: `${lastTicker} Returns ${timeFrame} Histogram`}}
+        layout={{width: '100px', height: '300px', title: `${lastTicker} Returns 1D Histogram`}}
         config={{ 
           displayModeBar: false,
         }}

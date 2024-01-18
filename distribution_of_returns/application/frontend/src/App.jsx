@@ -8,11 +8,11 @@ import Form from './components/Form.jsx'
 function App() {
 
   return (
-    <>
+    <div>
       <h1>{mainConstants.marketing.title}</h1>
       <Graph />
       <Form />
-    </>
+    </div>
   )
 }
 
