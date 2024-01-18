@@ -1,13 +1,13 @@
 # Application
 
-*By Jamal Noah Chester-Morris*  
+*By Jamal Noah Chester-Morris*
 *Jan 2024*
 
 This project is a Probability Distribution application that allows users to input stock ticker symbols and select a time frame. The application then renders a graph of the historical percentage returns based on the selected company and time frame. The time frames include 1D for daily % return, 1W for weekly % return, and 1M for monthly % returns. All probability distributions are calculated using data from the past 10 years. This is managed in `/api/views.py`, where the application connects to the unofficial Yahoo Finance API using a Python library.
 
 The data is processed to include percentage rate of change values. These values populate a histogram, and the application calculates a probability for the returns to be within a specified range. The probability is calculated by determining the count (the number of times an event occurs) - in this case, the number of times a stock price return falls within that range. The probability is then derived as follows: `probability = number of times a specific event occurs / total number of events`.
 
-![Screenshot](/application/static/docs/screenshot.png)
+<img src="/application/static/docs/screenshot.png">
 
 ## Technology Stack
 
