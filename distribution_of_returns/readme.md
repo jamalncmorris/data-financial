@@ -7,7 +7,7 @@ This project is a Probability Distribution application that allows users to inpu
 
 The data is processed to include percentage rate of change values. These values populate a histogram, and the application calculates a probability for the returns to be within a specified range. The probability is calculated by determining the count (the number of times an event occurs) - in this case, the number of times a stock price return falls within that range. The probability is then derived as follows: `probability = number of times a specific event occurs / total number of events`.
 
-<img src="/application/static/docs/screenshot.png">
+<div><img src="/application/static/docs/screenshot.png"></div>
 
 ## Technology Stack
 
