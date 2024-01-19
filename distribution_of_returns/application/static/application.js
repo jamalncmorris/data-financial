@@ -3673,11 +3673,11 @@ void main() {
           "blockColor": "change",
           "locale": "en",
           "symbolUrl": "",
-          "colorTheme": "dark",
+          "colorTheme": "light",
           "hasTopBar": false,
           "isDataSetEnabled": false,
           "isZoomEnabled": true,
           "hasSymbolTooltip": true,
           "width": "100%",
           "height": "100%"
-        }`,_.current.appendChild(W)},[]),Mi.jsxs("div",{className:"tradingview-widget-container",ref:_,children:[Mi.jsx("div",{className:"tradingview-widget-container__widget"}),Mi.jsx("div",{className:"tradingview-widget-copyright",children:Mi.jsx("a",{href:"https://www.tradingview.com/",rel:"noopener nofollow",target:"_blank",children:Mi.jsx("span",{className:"blue-text",children:"Track all markets on TradingView"})})})]})}const f7=Ms.memo(u7);function c7(){return Mi.jsxs("div",{children:[Mi.jsx("h1",{children:FT.marketing.title}),Mi.jsx(s7,{}),Mi.jsx(l7,{}),Mi.jsx("div",{className:"h-96",children:Mi.jsx(f7,{})})]})}zy.createRoot(document.getElementById("root")).render(Mi.jsx(G1.StrictMode,{children:Mi.jsx(k8,{store:OT,children:Mi.jsx("div",{"data-theme":FT.meta.theme,className:"container flex justify-center max-w-full mx-auto px-2 my-8 prose lg:prose-xl",children:Mi.jsx("div",{children:Mi.jsx(c7,{})})})})}));
+        }`,_.current.appendChild(W)},[]),Mi.jsxs("div",{className:"tradingview-widget-container",ref:_,children:[Mi.jsx("div",{className:"tradingview-widget-container__widget"}),Mi.jsx("div",{className:"tradingview-widget-copyright",children:Mi.jsx("a",{href:"",rel:"noopener nofollow",target:"_blank",children:Mi.jsx("span",{className:"blue-text",children:"..."})})})]})}const f7=Ms.memo(u7);function c7(){return Mi.jsxs("div",{children:[Mi.jsx("h1",{children:FT.marketing.title}),Mi.jsx(s7,{}),Mi.jsx(l7,{}),Mi.jsx("div",{className:"h-96",children:Mi.jsx(f7,{})})]})}zy.createRoot(document.getElementById("root")).render(Mi.jsx(G1.StrictMode,{children:Mi.jsx(k8,{store:OT,children:Mi.jsx("div",{"data-theme":FT.meta.theme,className:"container flex justify-center max-w-full mx-auto px-2 my-8 prose lg:prose-xl",children:Mi.jsx("div",{children:Mi.jsx(c7,{})})})})}));
